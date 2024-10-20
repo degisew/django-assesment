@@ -1,5 +1,5 @@
 from .base import *
-from .base import INSTALLED_APPS
+from .base import INSTALLED_APPS, MIDDLEWARE
 
 DEBUG = True
 
@@ -11,9 +11,14 @@ SECRET_KEY = env(
 
 INSTALLED_APPS += ['debug_toolbar']
 
+MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
 
 ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
 
 EMAIL_BACKEND = env(
     "DJANGO_EMAIL_BACKEND", default="django.core.mail.backends.console.EmailBackend",
 )
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
