@@ -56,9 +56,13 @@ CUSTOM_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'rest_framework.authtoken',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
     # social providers
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
@@ -114,6 +118,12 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 LOGIN_REDIRECT_URL = "home"
 ACCOUNT_LOGOUT_ON_GET = True
 
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+    ]
+}
 
 SOCIALACCOUNT_PROVIDERS = {
     "google": {
