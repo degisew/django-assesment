@@ -41,33 +41,33 @@ To run the tests, check your test coverage, and generate an HTML coverage report
 
     $ pytest
 
-# Installation
+## Installation
 Clone the repository:
 
-git clone https://github.com/degisew/django-assesment.git
-cd django-assesment
+    $ git clone https://github.com/degisew/django-assesment.git
+    $ cd django-assesment
 
-# Install poetry for dependency management
-pipx install poetry
-poetry init
-poetry shell
-poetry install
+## Install poetry for dependency management
+    $ pipx install poetry
+    $ poetry init
+    $ poetry shell
+    $ poetry install
 
-# Set up environment variables:
+## Set up environment variables:
 
 Create a .envs/.development and .envs/.production file in the root directory with the following keys:
 
-SECRET_KEY=your_secret_key
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
+    $ SECRET_KEY=your_secret_key
+    $ DEBUG=True
+    $ ALLOWED_HOSTS=localhost,127.0.0.1
+    
+    $ SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=your_google_key
+    $ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=your_google_secret
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=your_google_key
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=your_google_secret
+## Run migrations:
 
-# Run migrations:
+    $ python manage.py migrate
 
-python manage.py migrate
+## Run the development server:
 
-# Run the development server:
-
-python manage.py runserver
+    $ python manage.py runserver
