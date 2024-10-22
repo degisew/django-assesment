@@ -11,6 +11,8 @@ SECRET_KEY = env(
 
 INSTALLED_APPS += ['debug_toolbar']
 
+
+print('######################', INSTALLED_APPS)
 MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
 
 ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
