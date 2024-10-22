@@ -23,19 +23,6 @@ Settings are organized for development, and production environment separately un
 
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
 
-### Type checks
-
-Running type checks with mypy:
-
-    $ mypy social_auth
-
-### Test coverage
-
-To run the tests, check your test coverage, and generate an HTML coverage report:
-
-    $ coverage run -m pytest
-    $ coverage html
-    $ open htmlcov/index.html
 
 #### Running tests with pytest
 
