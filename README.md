@@ -42,7 +42,7 @@ Clone the repository:
 
 ## Set up environment variables:
 
-Create a .envs/.development and .envs/.production file in the root directory with the following keys:
+Create a `.envs/.development` and `.envs/.production` file in the root directory with the following keys:
 
     $ SECRET_KEY=your_secret_key
     $ DEBUG=True
