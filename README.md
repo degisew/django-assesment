@@ -1,5 +1,9 @@
 # Django-Assesment
-Create a Django API with django rest framework
+This project provides a robust authentication system for handling:
+
+OAuth login via social accounts (Google, Facebook, etc.)
+Custom email-based registration and authentication
+Role-based access control for different user roles (e.g., Admin, Coach, Agent).
 
 ## License: MIT
 
@@ -37,11 +41,33 @@ To run the tests, check your test coverage, and generate an HTML coverage report
 
     $ pytest
 
+# Installation
+Clone the repository:
 
-## Deployment
+git clone https://github.com/degisew/django-assesment.git
+cd django-assesment
 
-The following details how to deploy this application.
+# Install poetry for dependency management
+pipx install poetry
+poetry init
+poetry shell
+poetry install
 
-### Docker
+# Set up environment variables:
 
+Create a .envs/.development and .envs/.production file in the root directory with the following keys:
 
+SECRET_KEY=your_secret_key
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=your_google_key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=your_google_secret
+
+# Run migrations:
+
+python manage.py migrate
+
+# Run the development server:
+
+python manage.py runserver
