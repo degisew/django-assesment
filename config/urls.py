@@ -23,8 +23,7 @@ from social_auth.users.views import HomeView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/V1/auth/', include('social_auth.users.urls')),
-    path("accounts/", include("allauth.urls")),
-    path('', HomeView.as_view(), name='home'),
+    # path("accounts/", include("allauth.urls")),
 ]
 
 if settings.DEBUG:
