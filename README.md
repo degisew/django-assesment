@@ -42,11 +42,10 @@ Clone the repository:
 
 ## Set up environment variables:
 
-Create a `.envs/.development` and `.envs/.production` file in the root directory with the following keys:
+Create a `.envs/.development` and `.envs/.production` file in the root directory and store your secret keys and other creds inside `.envs/.development`:
 
     $ SECRET_KEY=your_secret_key
     $ DEBUG=True
-    $ ALLOWED_HOSTS=localhost,127.0.0.1
     
     $ SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=your_google_key
     $ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=your_google_secret
