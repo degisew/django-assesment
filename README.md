@@ -5,6 +5,8 @@ OAuth login via social accounts (Google, Facebook, etc.)
 Custom email-based registration and authentication
 Role-based access control for different user roles (e.g., Admin, Coach, Agent).
 
+![Registration Page](register.png)
+
 ## License: MIT
 
 ## Settings
