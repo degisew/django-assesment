@@ -1,1 +1,14 @@
-db.sqlite3
+# Ignore SQLite database files
+*.sqlite3
+*.sqlite
+
+# Ignore __pycache__ directories
+__pycache__/
+.envs/
+
+# Ignore other common files
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.env
