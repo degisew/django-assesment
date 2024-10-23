@@ -6,8 +6,10 @@ Custom email-based registration and authentication
 Role-based access control for different user roles (e.g., Admin, Coach, Agent).
 
 ![Registration Page](register.png)
-![Google Login](google_login.png) | ![Login Page](login.png)
-![Password Reset Page](password_reset.png) ![User Details Page](user_details.png)
+![Google Login](google_login.png) 
+![Login Page](login.png)
+![Password Reset Page](password_reset.png)
+![User Details Page](user_details.png)
 ![URLs List](urls.png)
 
 ## License: MIT
