@@ -1,7 +1,7 @@
 from dj_rest_auth.registration.serializers import RegisterSerializer
 from dj_rest_auth.serializers import LoginSerializer, UserDetailsSerializer
 from rest_framework import serializers
-from users.models import CustomUser
+from social_auth.users.models import CustomUser
 
 
 class CustomRegisterSerializer(RegisterSerializer):
@@ -43,7 +43,6 @@ class CustomLoginSerializer(LoginSerializer):
         password = attrs.get('password')
 
         if email and password:
-            # Use Django's built-in authentication to validate email and password
             from django.contrib.auth import authenticate
             user = authenticate(request=self.context.get('request'), email=email, password=password)
 
@@ -57,7 +56,7 @@ class CustomLoginSerializer(LoginSerializer):
 
 
 class CustomUserDetailsSerializer(UserDetailsSerializer):
-    role = serializers.CharField(source='get_role_display', read_only=True)  # Add the role field (if it's a choice field)
+    role = serializers.CharField(source='get_role_display', read_only=True)
 
     class Meta(UserDetailsSerializer.Meta):
         model = CustomUser

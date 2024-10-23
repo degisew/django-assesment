@@ -29,7 +29,7 @@ ENV_FILE_PATH = BASE_DIR / f'.envs/.{DJANGO_ENV}/.env'
 # Load the .env file based on the environment
 env.read_env(str(ENV_FILE_PATH))
 
-print("========>", ENV_FILE_PATH)
+# print("========>", ENV_FILE_PATH)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -67,6 +67,8 @@ THIRD_PARTY_APPS = [
     # social providers
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
+
+    'django_extensions',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
@@ -114,17 +116,15 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-REST_AUTH = {
-    # 'LOGIN_SERIALIZER': 'social_auth.users.api.serializers.CustomLoginSerializer',
+REST_AUTH: dict[str, str] = {
     'REGISTER_SERIALIZER': 'social_auth.users.api.serializers.CustomRegisterSerializer',
-
+    'LOGIN_SERIALIZER': 'social_auth.users.api.serializers.CustomLoginSerializer',
 }
-# Use custom registration serializer
 
 
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = "none"
-LOGIN_REDIRECT_URL = "home"
+# LOGIN_REDIRECT_URL = "home"
 ACCOUNT_LOGOUT_ON_GET = True
 
 

@@ -34,9 +34,10 @@ Clone the repository:
     $ git clone https://github.com/degisew/django-assesment.git
     $ cd django-assesment
 
-## Install poetry for dependency management
+## Install poetry in your machine
     $ pipx install poetry
-    $ poetry init
+    
+## Activate a virtual environment and install dependencies
     $ poetry shell
     $ poetry install
 
@@ -57,3 +58,7 @@ Create a `.envs/.development` and `.envs/.production` file in the root directory
 ## Run the development server:
 
     $ python manage.py runserver
+
+## Show available:
+
+    $ python manage.py show_urls
